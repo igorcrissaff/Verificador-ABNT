@@ -127,6 +127,7 @@ src/
 ├── gramatica/          # Arquivos das gramaticas
 └── referencias/        # Artigos de referencias para futuro artigo
 ```
+---
 
 ## 📋 Exemplo de Saída
 
@@ -140,218 +141,18 @@ Documento analisado: trabalho.docx
 Resultado:
 85% de conformidade.
 ```
+---
 
 ## 🔬 Aplicação Acadêmica
 
 Este projeto foi desenvolvido como uma proposta de aplicação prática dos conceitos de compiladores na validação automática de documentos acadêmicos, contribuindo para a redução de erros e otimização do processo de revisão.
+---
 
 ## 🤝 Contribuição
 
 Contribuições são bem-vindas. Caso deseje colaborar, abra uma issue ou envie um pull request.
-
-
-# 🚀 Instalação e Uso
-
-## Pré-requisitos
-
-Antes de iniciar, certifique-se de possuir os seguintes softwares instalados:
-
-* Python 3.10 ou superior
-* Java JDK 11 ou superior
-* Git
-
-Verifique as versões instaladas:
-
-```bash
-python --version
-java --version
-git --version
-```
-
 ---
 
-## Clonando o Repositório
-
-```bash
-git clone https://github.com/seu-usuario/abnt-validator.git
-cd abnt-validator
-```
-
----
-
-## Criando o Ambiente Virtual
-
-### Linux/macOS
-
-```bash
-python -m venv venv
-source venv/bin/activate
-```
-
-### Windows
-
-```powershell
-python -m venv venv
-venv\Scripts\activate
-```
-
----
-
-## Instalando Dependências
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Configurando o ANTLR
-
-Baixe o ANTLR:
-
-```bash
-mkdir ferramentas
-cd ferramentas
-
-curl -O https://www.antlr.org/download/antlr-4.13.2-complete.jar
-```
-
-Retorne para a raiz do projeto:
-
-```bash
-cd ..
-```
-
----
-
-## Gerando o Lexer e Parser
-
-Execute:
-
-```bash
-java -jar tools/antlr-4.13.2-complete.jar \
--Dlanguage=Python3 \
--visitor \
--o generated \
-grammar/ABNT.g4
-```
-
-Arquivos gerados:
-
-```text
-generated/
-├── ABNTLexer.py
-├── ABNTParser.py
-├── ABNTVisitor.py
-├── ABNTListener.py
-└── ...
-```
-
-Sempre que a gramática for alterada, execute novamente este comando.
-
----
-
-## Executando o Projeto
-
-Para validar um documento:
-
-```bash
-python main.py amostras/exemplo.docx
-```
-
-ou
-
-```bash
-python main.py amostras/exemplo.pdf
-```
-
----
-
-## Exemplo de Saída
-
-```text
-Iniciando análise...
-
-✓ Capa encontrada
-✓ Sumário encontrado
-✓ Introdução encontrada
-
-⚠ Referência não utilizada:
-  SILVA, João (2022)
-
-✗ Citação sem referência:
-  SANTOS (2023)
-
-Resultado: 92% de conformidade
-```
-
----
-
-## Executando os Testes
-
-```bash
-pytest
-```
-
-ou
-
-```bash
-pytest tests/
-```
-
----
-
-## Fluxo de Funcionamento
-
-```text
-Documento DOCX/PDF
-        │
-        ▼
-Extração de Conteúdo
-        │
-        ▼
-Representação Intermediária (JSON)
-        │
-        ▼
-Análise Léxica
-        │
-        ▼
-Análise Sintática
-        │
-        ▼
-Análise Semântica
-        │
-        ▼
-Relatório de Conformidade
-```
-
----
-
-## Contribuindo
-
-1. Crie uma branch para sua funcionalidade:
-
-```bash
-git checkout -b feature/nova-funcionalidade
-```
-
-2. Realize suas alterações.
-
-3. Execute os testes:
-
-```bash
-pytest
-```
-
-4. Envie suas alterações:
-
-```bash
-git push origin feature/nova-funcionalidade
-```
-
-5. Abra um Pull Request.
-
----
 
 ## 📄 Licença
 
