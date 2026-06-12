@@ -1,4 +1,4 @@
-# Generated from gramatica/ABNT.g4 by ANTLR 4.13.2
+# Generated from gramaticas/ABNTParser.g4 by ANTLR 4.13.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -10,23 +10,22 @@ else:
 
 def serializedATN():
     return [
-        4,1,10,44,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
-        6,2,7,7,7,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,3,1,
-        3,1,4,4,4,32,8,4,11,4,12,4,33,1,5,1,5,3,5,38,8,5,1,6,1,6,1,7,1,7,
-        1,7,0,0,8,0,2,4,6,8,10,12,14,0,0,37,0,16,1,0,0,0,2,19,1,0,0,0,4,
-        26,1,0,0,0,6,28,1,0,0,0,8,31,1,0,0,0,10,35,1,0,0,0,12,39,1,0,0,0,
-        14,41,1,0,0,0,16,17,3,2,1,0,17,18,5,0,0,1,18,1,1,0,0,0,19,20,3,4,
-        2,0,20,21,3,6,3,0,21,22,3,8,4,0,22,23,3,10,5,0,23,24,3,12,6,0,24,
-        25,3,14,7,0,25,3,1,0,0,0,26,27,5,1,0,0,27,5,1,0,0,0,28,29,5,2,0,
-        0,29,7,1,0,0,0,30,32,5,3,0,0,31,30,1,0,0,0,32,33,1,0,0,0,33,31,1,
-        0,0,0,33,34,1,0,0,0,34,9,1,0,0,0,35,37,5,4,0,0,36,38,5,5,0,0,37,
-        36,1,0,0,0,37,38,1,0,0,0,38,11,1,0,0,0,39,40,5,6,0,0,40,13,1,0,0,
-        0,41,42,5,7,0,0,42,15,1,0,0,0,2,33,37
+        4,1,11,39,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,1,0,1,
+        0,1,0,1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,2,1,3,4,3,25,8,3,11,3,12,3,26,
+        1,4,1,4,3,4,31,8,4,1,5,1,5,1,5,1,5,1,5,1,5,1,5,0,0,6,0,2,4,6,8,10,
+        0,0,34,0,12,1,0,0,0,2,15,1,0,0,0,4,20,1,0,0,0,6,24,1,0,0,0,8,28,
+        1,0,0,0,10,32,1,0,0,0,12,13,3,2,1,0,13,14,5,0,0,1,14,1,1,0,0,0,15,
+        16,3,4,2,0,16,17,3,6,3,0,17,18,3,8,4,0,18,19,3,10,5,0,19,3,1,0,0,
+        0,20,21,5,1,0,0,21,22,5,2,0,0,22,5,1,0,0,0,23,25,5,3,0,0,24,23,1,
+        0,0,0,25,26,1,0,0,0,26,24,1,0,0,0,26,27,1,0,0,0,27,7,1,0,0,0,28,
+        30,5,4,0,0,29,31,5,5,0,0,30,29,1,0,0,0,30,31,1,0,0,0,31,9,1,0,0,
+        0,32,33,5,7,0,0,33,34,5,1,0,0,34,35,5,6,0,0,35,36,5,2,0,0,36,37,
+        5,8,0,0,37,11,1,0,0,0,2,26,30
     ]
 
-class ABNTParser ( Parser ):
+class ABNTParserParser ( Parser ):
 
-    grammarFileName = "ABNT.g4"
+    grammarFileName = "ABNTParser.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -34,35 +33,35 @@ class ABNTParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [  ]
+    literalNames = [ "<INVALID>", "'-'", "'\\n'" ]
 
-    symbolicNames = [ "<INVALID>", "INSTITUICAO", "CURSO", "AUTOR", "TITULO_PRINCIPAL", 
-                      "SUBTITULO", "CIDADE", "ANO", "TITULO_PRIMARIO", "TEXTO", 
-                      "WS" ]
+    symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "AUTOR", "TITULO_PRINCIPAL", 
+                      "SUBTITULO", "ESTADO", "CIDADE", "ANO", "TITULO_PRIMARIO", 
+                      "TEXTO", "WS" ]
 
     RULE_documento = 0
     RULE_capa = 1
-    RULE_instituicao = 2
-    RULE_curso = 3
-    RULE_autores = 4
-    RULE_titulo = 5
-    RULE_cidade = 6
-    RULE_ano = 7
+    RULE_curso = 2
+    RULE_autores = 3
+    RULE_titulo = 4
+    RULE_publicacao = 5
 
-    ruleNames =  [ "documento", "capa", "instituicao", "curso", "autores", 
-                   "titulo", "cidade", "ano" ]
+    ruleNames =  [ "documento", "capa", "curso", "autores", "titulo", "publicacao" ]
 
     EOF = Token.EOF
+    T__0=1
+    T__1=2
     INSTITUICAO=1
     CURSO=2
     AUTOR=3
     TITULO_PRINCIPAL=4
     SUBTITULO=5
-    CIDADE=6
-    ANO=7
-    TITULO_PRIMARIO=8
-    TEXTO=9
-    WS=10
+    ESTADO=6
+    CIDADE=7
+    ANO=8
+    TITULO_PRIMARIO=9
+    TEXTO=10
+    WS=11
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -81,14 +80,14 @@ class ABNTParser ( Parser ):
             self.parser = parser
 
         def capa(self):
-            return self.getTypedRuleContext(ABNTParser.CapaContext,0)
+            return self.getTypedRuleContext(ABNTParserParser.CapaContext,0)
 
 
         def EOF(self):
-            return self.getToken(ABNTParser.EOF, 0)
+            return self.getToken(ABNTParserParser.EOF, 0)
 
         def getRuleIndex(self):
-            return ABNTParser.RULE_documento
+            return ABNTParserParser.RULE_documento
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDocumento" ):
@@ -109,14 +108,14 @@ class ABNTParser ( Parser ):
 
     def documento(self):
 
-        localctx = ABNTParser.DocumentoContext(self, self._ctx, self.state)
+        localctx = ABNTParserParser.DocumentoContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_documento)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 16
+            self.state = 12
             self.capa()
-            self.state = 17
-            self.match(ABNTParser.EOF)
+            self.state = 13
+            self.match(ABNTParserParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -133,32 +132,24 @@ class ABNTParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def instituicao(self):
-            return self.getTypedRuleContext(ABNTParser.InstituicaoContext,0)
-
-
         def curso(self):
-            return self.getTypedRuleContext(ABNTParser.CursoContext,0)
+            return self.getTypedRuleContext(ABNTParserParser.CursoContext,0)
 
 
         def autores(self):
-            return self.getTypedRuleContext(ABNTParser.AutoresContext,0)
+            return self.getTypedRuleContext(ABNTParserParser.AutoresContext,0)
 
 
         def titulo(self):
-            return self.getTypedRuleContext(ABNTParser.TituloContext,0)
+            return self.getTypedRuleContext(ABNTParserParser.TituloContext,0)
 
 
-        def cidade(self):
-            return self.getTypedRuleContext(ABNTParser.CidadeContext,0)
-
-
-        def ano(self):
-            return self.getTypedRuleContext(ABNTParser.AnoContext,0)
+        def publicacao(self):
+            return self.getTypedRuleContext(ABNTParserParser.PublicacaoContext,0)
 
 
         def getRuleIndex(self):
-            return ABNTParser.RULE_capa
+            return ABNTParserParser.RULE_capa
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCapa" ):
@@ -179,69 +170,18 @@ class ABNTParser ( Parser ):
 
     def capa(self):
 
-        localctx = ABNTParser.CapaContext(self, self._ctx, self.state)
+        localctx = ABNTParserParser.CapaContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_capa)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 19
-            self.instituicao()
-            self.state = 20
+            self.state = 15
             self.curso()
-            self.state = 21
+            self.state = 16
             self.autores()
-            self.state = 22
+            self.state = 17
             self.titulo()
-            self.state = 23
-            self.cidade()
-            self.state = 24
-            self.ano()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class InstituicaoContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def INSTITUICAO(self):
-            return self.getToken(ABNTParser.INSTITUICAO, 0)
-
-        def getRuleIndex(self):
-            return ABNTParser.RULE_instituicao
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInstituicao" ):
-                listener.enterInstituicao(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInstituicao" ):
-                listener.exitInstituicao(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInstituicao" ):
-                return visitor.visitInstituicao(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def instituicao(self):
-
-        localctx = ABNTParser.InstituicaoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_instituicao)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 26
-            self.match(ABNTParser.INSTITUICAO)
+            self.state = 18
+            self.publicacao()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -258,11 +198,14 @@ class ABNTParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
+        def INSTITUICAO(self):
+            return self.getToken(ABNTParserParser.INSTITUICAO, 0)
+
         def CURSO(self):
-            return self.getToken(ABNTParser.CURSO, 0)
+            return self.getToken(ABNTParserParser.CURSO, 0)
 
         def getRuleIndex(self):
-            return ABNTParser.RULE_curso
+            return ABNTParserParser.RULE_curso
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCurso" ):
@@ -283,12 +226,14 @@ class ABNTParser ( Parser ):
 
     def curso(self):
 
-        localctx = ABNTParser.CursoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_curso)
+        localctx = ABNTParserParser.CursoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 4, self.RULE_curso)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 28
-            self.match(ABNTParser.CURSO)
+            self.state = 20
+            self.match(ABNTParserParser.T__0)
+            self.state = 21
+            self.match(ABNTParserParser.T__1)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -307,12 +252,12 @@ class ABNTParser ( Parser ):
 
         def AUTOR(self, i:int=None):
             if i is None:
-                return self.getTokens(ABNTParser.AUTOR)
+                return self.getTokens(ABNTParserParser.AUTOR)
             else:
-                return self.getToken(ABNTParser.AUTOR, i)
+                return self.getToken(ABNTParserParser.AUTOR, i)
 
         def getRuleIndex(self):
-            return ABNTParser.RULE_autores
+            return ABNTParserParser.RULE_autores
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAutores" ):
@@ -333,18 +278,18 @@ class ABNTParser ( Parser ):
 
     def autores(self):
 
-        localctx = ABNTParser.AutoresContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_autores)
+        localctx = ABNTParserParser.AutoresContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_autores)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 31 
+            self.state = 24 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 30
-                self.match(ABNTParser.AUTOR)
-                self.state = 33 
+                self.state = 23
+                self.match(ABNTParserParser.AUTOR)
+                self.state = 26 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not (_la==3):
@@ -367,13 +312,13 @@ class ABNTParser ( Parser ):
             self.parser = parser
 
         def TITULO_PRINCIPAL(self):
-            return self.getToken(ABNTParser.TITULO_PRINCIPAL, 0)
+            return self.getToken(ABNTParserParser.TITULO_PRINCIPAL, 0)
 
         def SUBTITULO(self):
-            return self.getToken(ABNTParser.SUBTITULO, 0)
+            return self.getToken(ABNTParserParser.SUBTITULO, 0)
 
         def getRuleIndex(self):
-            return ABNTParser.RULE_titulo
+            return ABNTParserParser.RULE_titulo
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTitulo" ):
@@ -394,19 +339,19 @@ class ABNTParser ( Parser ):
 
     def titulo(self):
 
-        localctx = ABNTParser.TituloContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_titulo)
+        localctx = ABNTParserParser.TituloContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 8, self.RULE_titulo)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 35
-            self.match(ABNTParser.TITULO_PRINCIPAL)
-            self.state = 37
+            self.state = 28
+            self.match(ABNTParserParser.TITULO_PRINCIPAL)
+            self.state = 30
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==5:
-                self.state = 36
-                self.match(ABNTParser.SUBTITULO)
+                self.state = 29
+                self.match(ABNTParserParser.SUBTITULO)
 
 
         except RecognitionException as re:
@@ -418,7 +363,7 @@ class ABNTParser ( Parser ):
         return localctx
 
 
-    class CidadeContext(ParserRuleContext):
+    class PublicacaoContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -426,83 +371,50 @@ class ABNTParser ( Parser ):
             self.parser = parser
 
         def CIDADE(self):
-            return self.getToken(ABNTParser.CIDADE, 0)
+            return self.getToken(ABNTParserParser.CIDADE, 0)
 
-        def getRuleIndex(self):
-            return ABNTParser.RULE_cidade
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCidade" ):
-                listener.enterCidade(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCidade" ):
-                listener.exitCidade(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCidade" ):
-                return visitor.visitCidade(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def cidade(self):
-
-        localctx = ABNTParser.CidadeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_cidade)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 39
-            self.match(ABNTParser.CIDADE)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class AnoContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
+        def ESTADO(self):
+            return self.getToken(ABNTParserParser.ESTADO, 0)
 
         def ANO(self):
-            return self.getToken(ABNTParser.ANO, 0)
+            return self.getToken(ABNTParserParser.ANO, 0)
 
         def getRuleIndex(self):
-            return ABNTParser.RULE_ano
+            return ABNTParserParser.RULE_publicacao
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAno" ):
-                listener.enterAno(self)
+            if hasattr( listener, "enterPublicacao" ):
+                listener.enterPublicacao(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAno" ):
-                listener.exitAno(self)
+            if hasattr( listener, "exitPublicacao" ):
+                listener.exitPublicacao(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAno" ):
-                return visitor.visitAno(self)
+            if hasattr( visitor, "visitPublicacao" ):
+                return visitor.visitPublicacao(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def ano(self):
+    def publicacao(self):
 
-        localctx = ABNTParser.AnoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_ano)
+        localctx = ABNTParserParser.PublicacaoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 10, self.RULE_publicacao)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 41
-            self.match(ABNTParser.ANO)
+            self.state = 32
+            self.match(ABNTParserParser.CIDADE)
+            self.state = 33
+            self.match(ABNTParserParser.T__0)
+            self.state = 34
+            self.match(ABNTParserParser.ESTADO)
+            self.state = 35
+            self.match(ABNTParserParser.T__1)
+            self.state = 36
+            self.match(ABNTParserParser.ANO)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)

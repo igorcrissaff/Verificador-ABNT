@@ -21,8 +21,8 @@ git --version
 ## Clonando o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/abnt-validator.git
-cd abnt-validator
+git clone https://github.com/seu-usuario/validador-ABNT.git
+cd validador-ABNT
 ```
 
 ---
@@ -55,7 +55,7 @@ pip install -r requirements.txt
 ## 📂 Estrutura do Projeto
 
 ```text
-src/
+validador-ABNT/
 ├── amostras/           # Amostras de texto para testes
 ├── ANTLR/              # Arquivos gerados pelo ANTLR
 ├── extrator/           # Codigos para extração de conteudo dos documentos
@@ -87,17 +87,17 @@ cd ..
 Execute:
 
 ```bash
-java -jar tools/antlr-4.13.2-complete.jar \
+java -jar ferramentas/antlr-4.13.2-complete.jar \
 -Dlanguage=Python3 \
 -visitor \
--o generated \
-grammar/ABNT.g4
+gramaticas/*.g4 \
+-o ANTLR
 ```
 
 Arquivos gerados:
 
 ```text
-generated/
+ANTLR/
 ├── ABNTLexer.py
 ├── ABNTParser.py
 ├── ABNTVisitor.py
